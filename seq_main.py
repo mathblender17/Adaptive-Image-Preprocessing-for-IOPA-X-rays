@@ -101,18 +101,52 @@ def evaluate_images(ref_img, test_img):
     
     ref_img = to_uint8(ref_img)
     test_img = to_uint8(test_img)
+    if ref_img.shape != test_img.shape:
+        test_img = cv2.resize(test_img, (ref_img.shape[1], ref_img.shape[0]), interpolation=cv2.INTER_LINEAR)
+
     
     psnr_val = psnr(ref_img, test_img)
     ssim_val = ssim(ref_img, test_img)
     
     return {'PSNR': psnr_val, 'SSIM': ssim_val}
 
-# Example usage:
-metrics_static = evaluate_images(image, static_img)
-metrics_adaptive = evaluate_images(image, adap_img)
-metrics_ml = evaluate_images(image, ml_img)
-metrics_ml10 = evaluate_images(image, ml10_img)
-print("\n")
+# # Example usage:
+# metrics_static = evaluate_images(image, static_img)
+# metrics_adaptive = evaluate_images(image, adap_img)
+# metrics_ml = evaluate_images(image, ml_img)
+# metrics_ml10 = evaluate_images(image, ml10_img)
+# print("\n")
+# print("Static PSNR:", metrics_static['PSNR'], "SSIM:", metrics_static['SSIM'])
+# print("Adaptive PSNR:", metrics_adaptive['PSNR'], "SSIM:", metrics_adaptive['SSIM'])
+# print("ML PSNR:", metrics_ml['PSNR'], "SSIM:", metrics_ml['SSIM'])
+# print("ML 10-Iter PSNR:", metrics_ml10['PSNR'], "SSIM:", metrics_ml10['SSIM'])
+
+# Load the reference image (assumed grayscale or color as your images)
+ref_img_path = "Images_Data_science_intern\Reference_Output_Quality.jpg"
+ref_img = cv2.imread(ref_img_path, cv2.IMREAD_GRAYSCALE)  # or cv2.IMREAD_COLOR if needed
+
+# Convert your images to grayscale as well if needed (assuming grayscale for metrics)
+def to_gray_if_needed(img):
+    if len(img.shape) == 3 and img.shape[2] == 3:
+        return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    return img
+
+ref_img = to_gray_if_needed(ref_img)
+original_gray = to_gray_if_needed(image)
+static_gray = to_gray_if_needed(static_img)
+adap_gray = to_gray_if_needed(adap_img)
+ml_gray = to_gray_if_needed(ml_img)
+ml10_gray = to_gray_if_needed(ml10_img)
+
+# Then use ref_img as the reference for comparisons:
+metrics_original = evaluate_images(ref_img, original_gray)
+metrics_static = evaluate_images(ref_img, static_gray)
+metrics_adaptive = evaluate_images(ref_img, adap_gray)
+metrics_ml = evaluate_images(ref_img, ml_gray)
+metrics_ml10 = evaluate_images(ref_img, ml10_gray)
+
+print("\nComparison against Reference_Output_Quality.jpg:")
+print("Original PSNR:", metrics_original['PSNR'], "SSIM:", metrics_original['SSIM'])
 print("Static PSNR:", metrics_static['PSNR'], "SSIM:", metrics_static['SSIM'])
 print("Adaptive PSNR:", metrics_adaptive['PSNR'], "SSIM:", metrics_adaptive['SSIM'])
 print("ML PSNR:", metrics_ml['PSNR'], "SSIM:", metrics_ml['SSIM'])
