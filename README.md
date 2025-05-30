@@ -1,3 +1,4 @@
+
 # Adaptive-Image-Preprocessing-for-IOPA-X-rays
 
 ## Problem Understanding
@@ -8,7 +9,7 @@ We used a set of DICOM images provided by the dataset or simulated a diverse ran
 
 ## Methodology
 ### _Image Quality Metrics_
-<br>
+
 Brightness (mean intensity): Average pixel intensity indicating overall image illumination.
 
 Contrast (standard deviation): Measures pixel intensity variation, reflecting image contrast.
@@ -21,7 +22,6 @@ Noise Estimation: Calculated using wavelet-based standard deviation and flat reg
 These metrics guide adaptive preprocessing choices and evaluate enhancement effectiveness.
 
 ### _Static Preprocessing Baseline_
-<br>
 Histogram equalization and basic filtering techniques applied uniformly to all images.
 
 Serves as a baseline to compare improvements from adaptive methods.
@@ -46,15 +46,23 @@ Enhancements include sharpening, denoising, histogram equalization, or no operat
 
 ## Results & Evaluation
 ### Quantitative Results
-Preprocessing Method	PSNR	SSIM
-Original	XX.XX	0.XX
-Static	XX.XX	0.XX
-Adaptive Heuristic	XX.XX	0.XX
-ML Adaptive	XX.XX	0.XX
+| Preprocessing Method        | PSNR           | SSIM  |
+| ------------- |:-------------:| -----:|
+| Original     |  6.4504098663961065 | 0.17843051948974675 |
+| Static    | 6.851786691671412      |   0.11613097034108874 |
+| Adaptive Heuristic | 6.889461571193425      |   0.1339387590437667 |
+| ML Adaptive | 6.4328730540370325      |  0.1356472458652005 |
+| ML 10-Iter | 6.429384398934026     |    0.16286696248510507 |
+
+
+above table for : IS20250116_180218_7445_56958340.dcm
 
 
 ### Visual Comparison
 Original vs Static vs Adaptive images shown side-by-side.
+
+![Comparison between various preprocessing techniques](https://github.com/user-attachments/assets/c456b9b9-ff61-4e39-afc2-0b1ff7cf87d1)
+
 
 Adaptive methods demonstrate improved contrast and sharpness with controlled noise reduction.
 
@@ -90,7 +98,7 @@ Enhanced image quality improves feature visibility and consistency, leading to m
 ## Instructions
 
 
-### Running the Pipeline
+### Running the main Pipeline
 1. Clone the repository.
 
 2. Install dependencies:
@@ -108,3 +116,16 @@ python main.py
 5. View the visualizations and evaluation metrics printed in the console.
 
 6. Processed images and metrics are logged automatically.
+### Running the Sequential main Pipeline
+```bash
+python seq_main.py
+```
+*Ensure this file is available
+
+```bash
+ref_img_path = "Images_Data_science_intern\\Reference_Output_Quality.jpg"
+```
+
+
+
+
