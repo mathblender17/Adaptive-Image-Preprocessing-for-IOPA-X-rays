@@ -1,0 +1,14 @@
+Patient Name,Patient ID,Modality,Manufacturer,Photometric Interpretation,Rows,Columns,Pixel Spacing,Bits Stored,Tooth Region,Sharpness (if present),filename
+ abhishek singh,20250115_171637,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250115_171841_9465_61003253.dcm
+ kaushalya,20241118_173348,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250115_190348_9148_86297118.dcm
+ kaushalya,20241118_173348,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250115_191316_7227_10120577.dcm
+ suman,20250113_174950,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250116_180218_7445_56958340.dcm
+ naglaxmi,20250209_111652,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250218_193552_3393_78829426.dcm
+ naglaxmi,20250209_111652,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250218_193621_8940_10081171.dcm
+ bhamini modi,20250221_192601,IO,EWOOSOFT,MONOCHROME2,1095,800,"[0.0296, 0.0296]",8,N/A,N/A,IS20250221_192657_5718_56712676.dcm
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1168,1562,"[0.019000, 0.019000]",12,Maxillary left first molar tooth,N/A,R10.rvg
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1562,1168,"[0.019000, 0.019000]",12,Maxillary left second premolar tooth,N/A,R4.rvg
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1168,1562,"[0.019000, 0.019000]",12,Maxillary left first molar tooth,N/A,R5.rvg
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1562,1168,"[0.019000, 0.019000]",12,Maxillary left first molar tooth,N/A,R6.rvg
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1168,1562,"[0.019000, 0.019000]",12,Maxillary left first molar tooth,N/A,R7.rvg
+patel^manisha,13,IO,Carestream-Trophy,MONOCHROME2,1168,1562,"[0.019000, 0.019000]",12,Maxillary left first molar tooth,N/A,R9.rvg

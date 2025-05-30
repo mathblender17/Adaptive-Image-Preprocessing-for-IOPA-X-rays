@@ -1,0 +1,11 @@
+numpy==1.26.4
+pydicom==2.4.4
+opencv-python==4.9.0.80
+matplotlib==3.8.4
+scikit-image==0.22.0
+scikit-learn==1.4.2
+pandas==2.2.2
+scipy
+pywt
+joblib
+tk

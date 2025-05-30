@@ -1,0 +1,2 @@
+,Filename,brightness,contrast,Michelson_Contrast,sharpness,Sharpness_Tenengrad,Noise_STD_CenterPatch,noise,Noise_STD_Estimated,quality_class,image_path,enhanced_path,psnr,ssim
+13,Reference_Output_Quality.jpg,95.950806,66.45915,1.0,127.6235117,39.75496093,45.567837,3.877406438,0.9793029,noisy,Images_Data_science_intern\Reference_Output_Quality.jpg,adaptive_enhanced_images\Reference_Output_Quality.jpg,38.755285379358725,0.9628806766337713
